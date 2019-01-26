@@ -4615,6 +4615,26 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Omdb/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Omdb.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Omdb.dll": {}
+        }
       }
     }
   },
@@ -12521,14 +12541,26 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../Data/Data.csproj",
+      "msbuildProject": "../Data/Data.csproj"
+    },
+    "Omdb/1.0.0": {
+      "type": "project",
+      "path": "../Omdb/Omdb.csproj",
+      "msbuildProject": "../Omdb/Omdb.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Data >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
+      "Omdb >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12560,7 +12592,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Data\\Data.csproj"
+            },
+            "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Omdb.csproj": {
+              "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Omdb.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,9 @@
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\bin\Debug\netcoreapp2.1\Omdb.deps.json
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\bin\Debug\netcoreapp2.1\Omdb.dll
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\bin\Debug\netcoreapp2.1\Omdb.pdb
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\obj\Debug\netcoreapp2.1\Omdb.csprojAssemblyReference.cache
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\obj\Debug\netcoreapp2.1\Omdb.csproj.CoreCompileInputs.cache
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\obj\Debug\netcoreapp2.1\Omdb.AssemblyInfoInputs.cache
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\obj\Debug\netcoreapp2.1\Omdb.AssemblyInfo.cs
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\obj\Debug\netcoreapp2.1\Omdb.dll
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Omdb\obj\Debug\netcoreapp2.1\Omdb.pdb
