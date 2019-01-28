@@ -1,6 +1,6 @@
 using System;
 
-namespace Movies.Models
+namespace Ogd.Movies.Web.Models
 {
     public class ErrorViewModel
     {

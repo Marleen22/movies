@@ -694,9 +694,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Data\\Data.csproj",
-      "projectName": "Data",
-      "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Data\\Ogd.Movies.Api.csproj",
+      "projectName": "Ogd.Movies.Api",
+      "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Data\\Ogd.Movies.Api.csproj",
       "packagesPath": "C:\\Users\\marleen.vanluijk\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Data\\obj\\",
       "projectStyle": "PackageReference",

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Omdb.Models
+namespace Ogd.Movies.Omdb.Models
 {
     public class Response
     {

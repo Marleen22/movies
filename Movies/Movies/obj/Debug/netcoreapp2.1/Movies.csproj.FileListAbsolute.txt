@@ -31,5 +31,10 @@ C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\obj\Debug\netcoreapp2.1\
 C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\obj\Debug\netcoreapp2.1\Movies.pdb
 C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\obj\Debug\netcoreapp2.1\Movies.csproj.CopyComplete
 C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\obj\Debug\netcoreapp2.1\Razor\Views\Search\Index.g.cshtml.cs
-C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\bin\Debug\netcoreapp2.1\Omdb.dll
-C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\bin\Debug\netcoreapp2.1\Omdb.pdb
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\obj\Debug\netcoreapp2.1\Razor\Views\Search\Result.g.cshtml.cs
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\bin\Debug\netcoreapp2.1\Ogd.Movies.Api.dll
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\bin\Debug\netcoreapp2.1\Ogd.Movies.Omdb.dll
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\bin\Debug\netcoreapp2.1\Ogd.Movies.Youtube.dll
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\bin\Debug\netcoreapp2.1\Ogd.Movies.Api.pdb
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\bin\Debug\netcoreapp2.1\Ogd.Movies.Omdb.pdb
+C:\Users\marleen.vanluijk\_DEV\GIT\movies\Movies\Movies\bin\Debug\netcoreapp2.1\Ogd.Movies.Youtube.pdb

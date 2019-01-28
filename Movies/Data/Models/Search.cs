@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Movies.Models
+namespace Ogd.Movies.Movies.Models
 {
     public class Search
     {
-        public string Name { get; set; }
+        public string Title { get; set; }
     }
 }

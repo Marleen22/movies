@@ -5,14 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.37.0.1469" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj" />
-    <ProjectReference Include="..\Omdb\Omdb.csproj" />
+    <ProjectReference Include="..\Data\Ogd.Movies.Api.csproj" />
+    <ProjectReference Include="..\Omdb\Ogd.Movies.Omdb.csproj" />
+    <ProjectReference Include="..\Youtube\Ogd.Movies.Youtube.csproj" />
   </ItemGroup>
 
 </Project>
