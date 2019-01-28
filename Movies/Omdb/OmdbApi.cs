@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Ogd.Movies.Omdb.Models;
+using System;
 using System.IO;
 using System.Net;
 
@@ -29,6 +31,9 @@ namespace Ogd.Movies.Omdb
             {
                 result = streamReader.ReadToEnd();
             }
+
+            //Response response = JsonConvert.DeserializeObject<Response>(result);
+
             return result;
         }
     }

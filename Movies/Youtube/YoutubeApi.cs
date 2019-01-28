@@ -1,36 +1,50 @@
-﻿using System;
+﻿using Google.Apis.Services;
+using Google.Apis.YouTube.v3;
+using Ogd.Movies.Youtube.Models;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace Ogd.Movies.Youtube
 {
     public class YoutubeApi
     {
-        static public string doPUT(string URI)
+        public async Task<List<YoutubeMovie>> GetYoutubeMovies(string searchString)
         {
-            //TODO: Mogelijk nog ombouwen naar youtube-api
-            Uri uri = new Uri(String.Format(URI));
-
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "GET";
-
-            HttpWebResponse httpResponse = null;
-            try
+            var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            }
-            catch (Exception ex)
+                ApiKey = "AIzaSyBsS7lz-5DvzlOdlJP_KsAuY4kM8NnvCJU",
+                ApplicationName = this.GetType().ToString()
+            });
+
+            var searchListRequest = youtubeService.Search.List("snippet");
+            searchListRequest.Q = searchString; // Replace with your search term.
+            searchListRequest.MaxResults = 3;
+
+            // Call the search.list method to retrieve results matching the specified query term.
+            var searchListResponse = await searchListRequest.ExecuteAsync();
+
+            List<YoutubeMovie> youtubeMovies = new List<YoutubeMovie>();
+
+            // Add each result to the appropriate list, and then display the lists of
+            // matching videos, channels, and playlists.
+            foreach (var searchResult in searchListResponse.Items)
             {
-                return ex.ToString();
+                switch (searchResult.Id.Kind)
+                {
+                    case "youtube#video":
+                        youtubeMovies.Add(new YoutubeMovie
+                        {
+                            Title = searchResult.Snippet.Title,
+                            VideoId = searchResult.Id.VideoId
+                        });
+                        break;
+                }
             }
 
-            string result = null;
-            using (StreamReader streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                result = streamReader.ReadToEnd();
-            }
-            return result;
+            return youtubeMovies;
         }
     }
 }

@@ -1,7 +1,21 @@
-﻿<h2>@ViewBag.Title</h2>
+﻿@using Ogd.Movies.Web.Models
+@model ResultViewModel
 
-<p2>@ViewBag.Year</p2>
+@if (Model.Title == null)
+{
+    <H2>"There is no movie found with this title"</H2>
+}
+else
+{
+    <h2>@Html.DisplayFor(model => model.Title)</h2>
 
-<div>
-    <iframe width="560" height="315" src=@ViewBag.Movie frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+    <p>@Html.DisplayFor(model => model.Year)</p>
+
+    <div>
+        @foreach (var item in Model.YoutubeMovies)
+        {
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.VideoId" ; frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        }
+    </div>
+}
+

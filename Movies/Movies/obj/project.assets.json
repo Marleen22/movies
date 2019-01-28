@@ -4696,6 +4696,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "Google.Apis.YouTube.v3": "1.37.0.1469",
           "Newtonsoft.Json": "12.0.1"
         },
         "compile": {
