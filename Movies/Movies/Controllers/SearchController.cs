@@ -31,13 +31,14 @@ namespace Ogd.Movies.Web.Controllers
 
         //POST: Search
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Index(SearchViewModel viewModel)
         {
             Omdb.OmdbApi omdbApi = new Omdb.OmdbApi();
             Youtube.YoutubeApi youtubeApi = new Youtube.YoutubeApi();
 
             OmdbMovie omdbMovies = await omdbApi.GetOmdbMovie(viewModel.Title);
-            List<YoutubeMovie> youtubeMovies = await youtubeApi.GetYoutubeMovies(viewModel.Title);
+            List<YoutubeMovie> youtubeMovies = await youtubeApi.GetYoutubeMovies(viewModel.Title + "trailer");
 
             ResultViewModel resultViewModel = new ResultViewModel
             {

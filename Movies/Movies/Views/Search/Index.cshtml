@@ -20,6 +20,7 @@
             @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
         </div>
     </div>
+    @Html.AntiForgeryToken()
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Search" class="btn btn-default" />
