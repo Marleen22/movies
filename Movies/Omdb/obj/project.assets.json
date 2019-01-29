@@ -794,9 +794,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Imdb.csproj",
-      "projectName": "Ogd.Movies.Imdb",
-      "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Imdb.csproj",
+      "projectUniqueName": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Omdb.csproj",
+      "projectName": "Ogd.Movies.Omdb",
+      "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Omdb.csproj",
       "packagesPath": "C:\\Users\\marleen.vanluijk\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\obj\\",
       "projectStyle": "PackageReference",
