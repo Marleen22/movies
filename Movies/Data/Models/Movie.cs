@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Ogd.Movies.Omdb.Models;
+using Ogd.Movies.Youtube.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Ogd.Movies.Data.Models
 {
-    class Movie
+    public class Movie
     {
-        int Id { get; set; }
-        string Title {get; set; }
-        int Year { get; set; }
-        string Movielink { get; set; }
+        public OmdbMovie OmdbMovie { get; set; }
+
+        public List<YoutubeMovie> YoutubeMovie { get; set; }
     }
 }

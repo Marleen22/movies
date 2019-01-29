@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ogd.Movies.Omdb", "Omdb\Ogd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ogd.Movies.Api", "Data\Ogd.Movies.Api.csproj", "{8C9ED1BE-F447-4737-BB18-7761ABA35FFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ogd.Movies.Youtube", "Youtube\Ogd.Movies.Youtube.csproj", "{7A2BB219-3804-4674-A64A-FD510B668088}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ogd.Movies.Youtube", "Youtube\Ogd.Movies.Youtube.csproj", "{7A2BB219-3804-4674-A64A-FD510B668088}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "IMDBCore/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.App": "2.0.0",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/IMDBCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/IMDBCore.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -216,10 +229,34 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "OmdbApiNet/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/OMDbApiNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OMDbApiNet.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "IMDBCore/1.0.2": {
+      "sha512": "a04YVTf+bzyYCo4GCUk+lLUJSOPk4JvlPOtvj4F3avKEo8JfoEgEwlme/rbPTqU1eM8NZ1HD2SbUZZ9uzVVLBg==",
+      "type": "package",
+      "path": "imdbcore/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "imdbcore.1.0.2.nupkg.sha512",
+        "imdbcore.nuspec",
+        "lib/netcoreapp2.0/IMDBCore.dll"
+      ]
+    },
     "Microsoft.NETCore.App/2.1.0": {
       "sha512": "AvT774nTFgU8cYcGO9j1EMwuayKslxqYTurg32HGpWa2hEYNuW2+XgYVVNcZe6Ndbr84QX6fwaOZfd5n+1m2OA==",
       "type": "package",
@@ -728,12 +765,26 @@
         "newtonsoft.json.12.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec"
       ]
+    },
+    "OmdbApiNet/1.1.0": {
+      "sha512": "YrXwO4zIkcakYLZGrQPibS5PiZCKC0hPo4LGc7JBR1UoX84CvLQkmdK64yC8CMXb6HtLof5nlv8mWGrhRSdCJA==",
+      "type": "package",
+      "path": "omdbapinet/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/OMDbApiNet.dll",
+        "omdbapinet.1.1.0.nupkg.sha512",
+        "omdbapinet.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "IMDBCore >= 1.0.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Newtonsoft.Json >= 12.0.1"
+      "Newtonsoft.Json >= 12.0.1",
+      "OmdbApiNet >= 1.1.0"
     ]
   },
   "packageFolders": {
@@ -743,9 +794,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Omdb.csproj",
-      "projectName": "Ogd.Movies.Omdb",
-      "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Omdb.csproj",
+      "projectUniqueName": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Imdb.csproj",
+      "projectName": "Ogd.Movies.Imdb",
+      "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Imdb.csproj",
       "packagesPath": "C:\\Users\\marleen.vanluijk\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\obj\\",
       "projectStyle": "PackageReference",
@@ -777,6 +828,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "IMDBCore": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -786,6 +841,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "OmdbApiNet": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           }
         },
         "imports": [

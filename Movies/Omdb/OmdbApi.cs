@@ -1,40 +1,32 @@
-﻿using Newtonsoft.Json;
+﻿using System.Threading.Tasks;
+
+using IMDBCore;
+
 using Ogd.Movies.Omdb.Models;
-using System;
-using System.IO;
-using System.Net;
 
 namespace Ogd.Movies.Omdb
 {
     public class OmdbApi
     {
-        static public string doPUT(string URI)
+        public async Task<OmdbMovie> GetOmdbMovie(string searchString)
         {
-            Uri uri = new Uri(String.Format(URI));
+            string apiKey = "df62845f";
 
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "GET";
+            var imdb = new Imdb(apiKey);
+            var movie = await imdb.GetMovieAsync(searchString);
 
-            HttpWebResponse httpResponse = null;
-            try
+            OmdbMovie omdbMovie = new OmdbMovie
             {
-                httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            }
-            catch (Exception ex)
-            {
-                return ex.ToString();
-            }
+                Title = movie.Title,
+                Year = movie.Year,
+                Actors = movie.Actors,
+                Genre = movie.Genre,
+                Plot = movie.Plot,
+                Language = movie.Language,
+                Poster = movie.Poster
+            };
 
-            string result = null;
-            using (StreamReader streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                result = streamReader.ReadToEnd();
-            }
-
-            //Response response = JsonConvert.DeserializeObject<Response>(result);
-
-            return result;
+            return omdbMovie;
         }
     }
 }

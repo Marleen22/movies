@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Omdb\Ogd.Movies.Omdb.csproj" />
+    <ProjectReference Include="..\Youtube\Ogd.Movies.Youtube.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -2,6 +2,72 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Google.Apis/1.37.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.37.0",
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.37.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.37.0",
+          "Google.Apis.Core": "1.37.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.37.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
+      "Google.Apis.YouTube.v3/1.37.0.1469": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.37.0",
+          "Google.Apis.Auth": "1.37.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.YouTube.v3.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.YouTube.v3.dll": {}
+        }
+      },
+      "IMDBCore/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.App": "2.0.0",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/IMDBCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/IMDBCore.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -207,10 +273,162 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "OmdbApiNet/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/OMDbApiNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OMDbApiNet.dll": {}
+        }
+      },
+      "Ogd.Movies.Omdb/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "IMDBCore": "1.0.2",
+          "Newtonsoft.Json": "12.0.1",
+          "OmdbApiNet": "1.1.0"
+        },
+        "compile": {
+          "bin/placeholder/Ogd.Movies.Omdb.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ogd.Movies.Omdb.dll": {}
+        }
+      },
+      "Ogd.Movies.Youtube/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Google.Apis.YouTube.v3": "1.37.0.1469",
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Ogd.Movies.Youtube.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ogd.Movies.Youtube.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Google.Apis/1.37.0": {
+      "sha512": "ancC4uCxPmEw57wz8FOVfM3FwCpV+f04i2kRwtF+NgG2hHUuM2e2FsLJxOwFL8cdGlHlEYhsZHXJ/3iSTzpgHA==",
+      "type": "package",
+      "path": "google.apis/1.37.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.apis.1.37.0.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Auth/1.37.0": {
+      "sha512": "VUNRFpMOa/2jIUtcJPE7i0N9PQ3uFwLCs0fp1HnZq0aSWOuq1VedzF/hmbAdCPO/ke6WM+wrK21Hc6IzAxi72g==",
+      "type": "package",
+      "path": "google.apis.auth/1.37.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.apis.auth.1.37.0.nupkg.sha512",
+        "google.apis.auth.nuspec",
+        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net45/Google.Apis.Auth.dll",
+        "lib/net45/Google.Apis.Auth.pdb",
+        "lib/net45/Google.Apis.Auth.xml",
+        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.pdb",
+        "lib/netstandard1.3/Google.Apis.Auth.xml",
+        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.pdb",
+        "lib/netstandard2.0/Google.Apis.Auth.xml"
+      ]
+    },
+    "Google.Apis.Core/1.37.0": {
+      "sha512": "PdHqn/87QYliHMvy6euRFv1ssZENIOcPw7XkHPQyu+JlQQLlgng7VzgtB+PuPT4S9R0sVSea2gLIIjyunfGZUw==",
+      "type": "package",
+      "path": "google.apis.core/1.37.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.apis.core.1.37.0.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
+    "Google.Apis.YouTube.v3/1.37.0.1469": {
+      "sha512": "YUX1BL/SyfLToEacMV0sNnkC/psVwGVV8lyVqRtQmKXFrW7rYoH11yXee/OX6X/oSE9KENajLg8nUPQgcAMu6w==",
+      "type": "package",
+      "path": "google.apis.youtube.v3/1.37.0.1469",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.apis.youtube.v3.1.37.0.1469.nupkg.sha512",
+        "google.apis.youtube.v3.nuspec",
+        "lib/net40/Google.Apis.YouTube.v3.dll",
+        "lib/net40/Google.Apis.YouTube.v3.pdb",
+        "lib/net40/Google.Apis.YouTube.v3.xml",
+        "lib/net45/Google.Apis.YouTube.v3.dll",
+        "lib/net45/Google.Apis.YouTube.v3.pdb",
+        "lib/net45/Google.Apis.YouTube.v3.xml",
+        "lib/netstandard1.0/Google.Apis.YouTube.v3.dll",
+        "lib/netstandard1.0/Google.Apis.YouTube.v3.pdb",
+        "lib/netstandard1.0/Google.Apis.YouTube.v3.xml",
+        "lib/netstandard1.3/Google.Apis.YouTube.v3.dll",
+        "lib/netstandard1.3/Google.Apis.YouTube.v3.pdb",
+        "lib/netstandard1.3/Google.Apis.YouTube.v3.xml",
+        "lib/netstandard2.0/Google.Apis.YouTube.v3.dll",
+        "lib/netstandard2.0/Google.Apis.YouTube.v3.pdb",
+        "lib/netstandard2.0/Google.Apis.YouTube.v3.xml"
+      ]
+    },
+    "IMDBCore/1.0.2": {
+      "sha512": "a04YVTf+bzyYCo4GCUk+lLUJSOPk4JvlPOtvj4F3avKEo8JfoEgEwlme/rbPTqU1eM8NZ1HD2SbUZZ9uzVVLBg==",
+      "type": "package",
+      "path": "imdbcore/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "imdbcore.1.0.2.nupkg.sha512",
+        "imdbcore.nuspec",
+        "lib/netcoreapp2.0/IMDBCore.dll"
+      ]
+    },
     "Microsoft.NETCore.App/2.1.0": {
       "sha512": "AvT774nTFgU8cYcGO9j1EMwuayKslxqYTurg32HGpWa2hEYNuW2+XgYVVNcZe6Ndbr84QX6fwaOZfd5n+1m2OA==",
       "type": "package",
@@ -680,11 +898,74 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "OmdbApiNet/1.1.0": {
+      "sha512": "YrXwO4zIkcakYLZGrQPibS5PiZCKC0hPo4LGc7JBR1UoX84CvLQkmdK64yC8CMXb6HtLof5nlv8mWGrhRSdCJA==",
+      "type": "package",
+      "path": "omdbapinet/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/OMDbApiNet.dll",
+        "omdbapinet.1.1.0.nupkg.sha512",
+        "omdbapinet.nuspec"
+      ]
+    },
+    "Ogd.Movies.Omdb/1.0.0": {
+      "type": "project",
+      "path": "../Omdb/Ogd.Movies.Omdb.csproj",
+      "msbuildProject": "../Omdb/Ogd.Movies.Omdb.csproj"
+    },
+    "Ogd.Movies.Youtube/1.0.0": {
+      "type": "project",
+      "path": "../Youtube/Ogd.Movies.Youtube.csproj",
+      "msbuildProject": "../Youtube/Ogd.Movies.Youtube.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Ogd.Movies.Omdb >= 1.0.0",
+      "Ogd.Movies.Youtube >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -716,7 +997,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Omdb.csproj": {
+              "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Omdb\\Ogd.Movies.Omdb.csproj"
+            },
+            "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Youtube\\Ogd.Movies.Youtube.csproj": {
+              "projectPath": "C:\\Users\\marleen.vanluijk\\_DEV\\GIT\\movies\\Movies\\Youtube\\Ogd.Movies.Youtube.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

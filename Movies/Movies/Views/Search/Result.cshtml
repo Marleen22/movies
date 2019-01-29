@@ -11,6 +11,33 @@ else
 
     <p>@Html.DisplayFor(model => model.Year)</p>
 
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Plot)</th>
+            <td>@Html.DisplayFor(model => model.Plot)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Year)</th>
+            <td>@Html.DisplayFor(model => model.Year)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Genre)</th>
+            <td>@Html.DisplayFor(model => model.Genre)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Actors)</th>
+            <td>@Html.DisplayFor(model => model.Actors)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Language)</th>
+            <td>@Html.DisplayFor(model => model.Language)</td>
+        </tr>
+    </table>
+
+    <p>
+        <asp:Image id="Image1" runat="server" AlternateText="Image text" ImageAlign="left" ImageUrl="@Html.DisplayFor(model => model.Poster)" />
+    </p>
+
     <div>
         @foreach (var item in Model.YoutubeMovies)
         {

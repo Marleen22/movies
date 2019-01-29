@@ -17,8 +17,7 @@ using Google.Apis.YouTube.v3.Data;
 
 using Ogd.Movies.Web.Models;
 using Ogd.Movies.Youtube.Models;
-using Ogd.Movies;
-using Ogd.Movies.Youtube;
+using Ogd.Movies.Omdb.Models;
 
 namespace Ogd.Movies.Web.Controllers
 {
@@ -37,23 +36,18 @@ namespace Ogd.Movies.Web.Controllers
             Omdb.OmdbApi omdbApi = new Omdb.OmdbApi();
             Youtube.YoutubeApi youtubeApi = new Youtube.YoutubeApi();
 
-            var title = viewModel.Title;
-            var keyOmdb = "df62845f";
-
-            string uriOmdb = "http://www.omdbapi.com/?apikey="+keyOmdb+"&t="+title;
-            string jobOmdb = Omdb.OmdbApi.doPUT(uriOmdb);
-
-            Omdb.Models.Response responseOmdb = JsonConvert.DeserializeObject<Omdb.Models.Response>(jobOmdb);
-
-            //TODO: Show info back on the screen
-            //TODO: Check if something has found
-
+            OmdbMovie omdbMovies = await omdbApi.GetOmdbMovie(viewModel.Title);
             List<YoutubeMovie> youtubeMovies = await youtubeApi.GetYoutubeMovies(viewModel.Title);
 
             ResultViewModel resultViewModel = new ResultViewModel
             {
-                Title = responseOmdb.Title,
-                Year = responseOmdb.Year,
+                Title = omdbMovies.Title,
+                Year = omdbMovies.Year,
+                Actors = omdbMovies.Actors,
+                Genre = omdbMovies.Genre,
+                Plot = omdbMovies.Plot,
+                Language = omdbMovies.Language,
+                Poster = omdbMovies.Poster,
                 YoutubeMovies = youtubeMovies
             };
 

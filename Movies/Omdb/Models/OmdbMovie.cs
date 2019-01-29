@@ -1,12 +1,6 @@
-﻿using Ogd.Movies.Youtube.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Ogd.Movies.Web.Models
+﻿namespace Ogd.Movies.Omdb.Models
 {
-    public class ResultViewModel
+    public class OmdbMovie
     {
         public string Title { get; set; }
 
@@ -21,7 +15,5 @@ namespace Ogd.Movies.Web.Models
         public string Language { get; set; }
 
         public string Poster { get; set; }
-
-        public List<YoutubeMovie> YoutubeMovies {get;set;} 
     }
 }
