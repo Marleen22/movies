@@ -1,8 +1,6 @@
-﻿using Ogd.Movies.Youtube.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
+using Ogd.Movies.Youtube.Models;
 
 namespace Ogd.Movies.Web.Models
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ogd.Movies.Youtube.Models
+﻿namespace Ogd.Movies.Youtube.Models
 {
     public class YoutubeMovie
     {

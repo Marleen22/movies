@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
+
 using Ogd.Movies.Web.Models;
 
 namespace Ogd.Movies.Web.Controllers

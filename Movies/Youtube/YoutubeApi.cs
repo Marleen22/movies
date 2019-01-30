@@ -1,11 +1,10 @@
-﻿using Google.Apis.Services;
-using Google.Apis.YouTube.v3;
-using Ogd.Movies.Youtube.Models;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Net;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+
+using Google.Apis.Services;
+using Google.Apis.YouTube.v3;
+
+using Ogd.Movies.Youtube.Models;
 
 namespace Ogd.Movies.Youtube
 {

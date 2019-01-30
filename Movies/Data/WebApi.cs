@@ -1,12 +1,11 @@
-﻿using IMDBCore;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+
 using Newtonsoft.Json;
+
 using Ogd.Movies.Data.Models;
 using Ogd.Movies.Omdb.Models;
 using Ogd.Movies.Youtube.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ogd.Movies.Api
 {

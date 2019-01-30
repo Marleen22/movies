@@ -1,8 +1,7 @@
-﻿using Ogd.Movies.Omdb.Models;
+﻿using System.Collections.Generic;
+
+using Ogd.Movies.Omdb.Models;
 using Ogd.Movies.Youtube.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Ogd.Movies.Data.Models
 {

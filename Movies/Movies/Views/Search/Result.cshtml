@@ -9,8 +9,6 @@ else
 {
     <h2>@Html.DisplayFor(model => model.Title)</h2>
 
-    <p>@Html.DisplayFor(model => model.Year)</p>
-
     <table>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Plot)</th>
@@ -35,16 +33,26 @@ else
     </table>
 
     <p>
-        <asp:Image id="Image1" runat="server" AlternateText="Image text" ImageAlign="left" ImageUrl="@Html.DisplayFor(model => model.Poster)" />
+        @if (Model.Poster != "N/A")
+        {
+            <img src="@Url.Content(Model.Poster)" />
+        }
     </p>
 
     <div>
-        @foreach (var item in Model.YoutubeMovies)
+        @if (Model.YoutubeMovies.Count == 0)
         {
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.VideoId" ; frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p>No youtube trailer found for <b>@Model.Title</b></p>
+        }
+        else
+        {
+            @foreach (var item in Model.YoutubeMovies)
+            {
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.VideoId" ; frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            }
         }
     </div>
 
-    @Html.ActionLink("Back", "Index", "Result")
+    @Html.ActionLink("Back", "Index")
 }
 
