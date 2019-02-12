@@ -31,16 +31,17 @@ namespace Ogd.Movies.Youtube
             // matching videos, channels, and playlists.
             foreach (var searchResult in searchListResponse.Items)
             {
-                switch (searchResult.Id.Kind)
+                if (searchResult.Id.Kind == "youtube#video")
                 {
-                    case "youtube#video":
-                        youtubeMovies.Add(new YoutubeMovie
-                        {
-                            Title = searchResult.Snippet.Title,
-                            VideoId = searchResult.Id.VideoId
-                        });
-                        break;
+                    youtubeMovies.Add(new YoutubeMovie
+                    {
+                        Title = searchResult.Snippet.Title,
+                        VideoId = searchResult.Id.VideoId
+                    });
+
                 }
+
+
             }
 
             return youtubeMovies;

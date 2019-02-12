@@ -26,7 +26,7 @@ namespace Ogd.Movies.Web.Controllers
             Youtube.YoutubeApi youtubeApi = new Youtube.YoutubeApi();
 
             OmdbMovie omdbMovies = await omdbApi.GetOmdbMovie(viewModel.Title);
-            List<YoutubeMovie> youtubeMovies = await youtubeApi.GetYoutubeMovies(omdbMovies.Title + omdbMovies.Year + "trailer");
+            List<YoutubeMovie> youtubeMovies = await youtubeApi.GetYoutubeMovies($"{omdbMovies.Title} {omdbMovies.Year} trailer");
 
             ResultViewModel resultViewModel = new ResultViewModel
             {
