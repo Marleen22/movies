@@ -38,12 +38,8 @@ namespace Ogd.Movies.Youtube
                         Title = searchResult.Snippet.Title,
                         VideoId = searchResult.Id.VideoId
                     });
-
                 }
-
-
             }
-
             return youtubeMovies;
         }
     }
